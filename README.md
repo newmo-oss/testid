@@ -13,6 +13,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/newmo-oss/newmotime"
+	"github.com/newmo-oss/newmotime/newmotimetest"
 	"github.com/newmo-oss/testid"
 )
 
