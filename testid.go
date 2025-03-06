@@ -3,6 +3,9 @@ package testid
 
 import (
 	"context"
+	"testing"
+
+	"github.com/google/uuid"
 )
 
 const (
@@ -25,4 +28,9 @@ func FromContext(ctx context.Context) (string, bool) {
 // WithValue returns a context associated with tid.
 func WithValue(ctx context.Context, tid string) context.Context {
 	return context.WithValue(ctx, contextKey{}, tid)
+}
+
+// New creates a testid which is based on (testing.TB).Name and uuid.
+func New(tb testing.TB) string {
+	return tb.Name() + "_" + uuid.NewString()
 }
