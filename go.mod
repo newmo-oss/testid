@@ -1,5 +1,10 @@
 module github.com/newmo-oss/testid
 
-go 1.22.0
+go 1.22.9
 
-require github.com/google/uuid v1.6.0
+toolchain go1.24.1
+
+require (
+	github.com/google/uuid v1.6.0
+	github.com/newmo-oss/gotestingmock v0.1.1
+)

@@ -1,2 +1,4 @@
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/newmo-oss/gotestingmock v0.1.1 h1:EtZrif5qSsVrJ4w944pToOL3L9ux0WKwrtKXnzv+Mj8=
+github.com/newmo-oss/gotestingmock v0.1.1/go.mod h1:ee64ZPEODG1GK+c4fHzxRzE9WbMi9VuIgEItMA0yXjI=
