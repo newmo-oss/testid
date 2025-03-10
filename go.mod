@@ -1,8 +1,6 @@
 module github.com/newmo-oss/testid
 
-go 1.22.9
-
-toolchain go1.24.1
+go 1.23.7
 
 require (
 	github.com/google/uuid v1.6.0
