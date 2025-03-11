@@ -2,6 +2,7 @@ package testid_test
 
 import (
 	"context"
+	"strings"
 	"testing"
 
 	"github.com/google/uuid"
@@ -11,6 +12,8 @@ import (
 )
 
 func Test(t *testing.T) {
+	t.Parallel()
+
 	t.Run("empty test id", func(t *testing.T) {
 		want := false
 		_, got := testid.FromContext(context.Background())
@@ -52,6 +55,36 @@ func Test(t *testing.T) {
 
 		if r.PanicValue != nil {
 			t.Error("unexpected panic:", r.PanicValue)
+		}
+	})
+}
+
+func TestNew(t *testing.T) {
+	t.Parallel()
+
+	{
+		got := testid.New(t)
+		t.Log("testid =", got)
+		if !strings.HasPrefix(got, "TestNew_") {
+			t.Fatal(`testid.New must return string which has t.Name() + "_" prefix:`, got)
+		}
+
+		_, err := uuid.Parse(strings.TrimPrefix(got, "TestNew_"))
+		if err != nil {
+			t.Error("unexpected error:", err)
+		}
+	}
+
+	t.Run("Sub", func(t *testing.T) {
+		got := testid.New(t)
+		t.Log("testid =", got)
+		if !strings.HasPrefix(got, "TestNew/Sub_") {
+			t.Fatal(`testid.New must return string which has t.Name() + "_" prefix:`, got)
+		}
+
+		_, err := uuid.Parse(strings.TrimPrefix(got, "TestNew/Sub_"))
+		if err != nil {
+			t.Error("unexpected error:", err)
 		}
 	})
 }

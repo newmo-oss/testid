@@ -5,6 +5,8 @@ import (
 	"context"
 	"fmt"
 	"testing"
+
+	"github.com/google/uuid"
 )
 
 const (
@@ -34,4 +36,9 @@ func WithValue(ctx context.Context, tid string) context.Context {
 		panic(msg)
 	}
 	return context.WithValue(ctx, contextKey{}, tid)
+}
+
+// New creates a testid which is based on (testing.TB).Name and uuid.
+func New(tb testing.TB) string {
+	return tb.Name() + "_" + uuid.NewString()
 }
