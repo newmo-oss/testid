@@ -32,7 +32,7 @@ var checkDuplicated = testing.Testing()
 func WithValue(ctx context.Context, tid string) context.Context {
 	beforeTestID, ok := ctx.Value(contextKey{}).(string)
 	if ok && checkDuplicated {
-		msg := fmt.Sprintf("test id had alread been associated: %s", beforeTestID)
+		msg := fmt.Sprintf("test id has already been associated: %s", beforeTestID)
 		panic(msg)
 	}
 	return context.WithValue(ctx, contextKey{}, tid)
