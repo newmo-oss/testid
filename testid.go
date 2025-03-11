@@ -3,6 +3,7 @@ package testid
 
 import (
 	"context"
+	"fmt"
 	"testing"
 
 	"github.com/google/uuid"
@@ -25,8 +26,15 @@ func FromContext(ctx context.Context) (string, bool) {
 	return tid, ok
 }
 
+var checkDuplicated = testing.Testing()
+
 // WithValue returns a context associated with tid.
 func WithValue(ctx context.Context, tid string) context.Context {
+	beforeTestID, ok := ctx.Value(contextKey{}).(string)
+	if ok && checkDuplicated {
+		msg := fmt.Sprintf("test id has already been associated: %s", beforeTestID)
+		panic(msg)
+	}
 	return context.WithValue(ctx, contextKey{}, tid)
 }
 
