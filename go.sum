@@ -1,4 +1,8 @@
+github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
+github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
-github.com/newmo-oss/gotestingmock v0.1.2 h1:4u0+4juIFH8mGm90BkQ+T4Jl2qKK2qd/Wzry79yVT3U=
-github.com/newmo-oss/gotestingmock v0.1.2/go.mod h1:/clfmHccDd3UnwZPrloKKm+w8rNfzenFTLhMzUh4wFI=
+github.com/newmo-oss/go-caller v0.1.0 h1:jZS2Vz8587TXXUZPWhVUTH9EwndOMJUYrae6tHGV5HI=
+github.com/newmo-oss/go-caller v0.1.0/go.mod h1:5m36S/OzQm/FwFnT1Z9KJyzf1Kf8A3kdI0x92c04+a4=
+github.com/newmo-oss/gotestingmock v0.2.0 h1:dw4og7X7pX5/9ObHg3BLKNyhH9XsVnY+P8v3r2Jj7yQ=
+github.com/newmo-oss/gotestingmock v0.2.0/go.mod h1:e0m8IIbvI9qQw3aIiia+nnVPcJylnPpD78hKWNWXSVM=
